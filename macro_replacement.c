@@ -6,13 +6,13 @@
 Macro macros[MAX_MACROS];
 int macro_count = 0;
 
-// Check whether character is part of an identifier
+// Check  character isidentifier
 int is_id_char(int ch)
 {
     return isalnum((unsigned char)ch) || ch == '_';
 }
 
-// Find macro
+// Finding macro
 int find_macro(char name[])
 {
     int i;
@@ -26,7 +26,7 @@ int find_macro(char name[])
     return -1;
 }
 
-// Add macro
+// Adding macro
 void add_macro(char line[])
 {
     char name[50];
@@ -45,7 +45,7 @@ void add_macro(char line[])
     while (isspace((unsigned char)*p))
         p++;
 
-    // Read macro name
+    // Reading macro->name
     while (is_id_char(*p) && i < 49)
         name[i++] = *p++;
 
